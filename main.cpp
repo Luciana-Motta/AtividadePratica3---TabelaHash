@@ -53,7 +53,6 @@ class Hash
                 } i++;
             }
             if(i == tamanhoTabela || vetor[aux].getInfo() == -2){
-                cout << "valor ainda não inserido" << endl;
                 return NULL;
             }
             return &vetor[aux];
@@ -63,7 +62,7 @@ class Hash
             int aux;
             Data *pont = procurar(chave , data);
             if ( pont != NULL){
-                cout << "data já inserida anteriormente" << endl;
+                cout << "data jÃ¡ inserida anteriormente" << endl;
                 return pont;
             }
             int i = 0;
@@ -83,7 +82,7 @@ class Hash
         void destroi(){
             Data *p;
             for (int i = 0 ; i < tamanhoTabela ; i++){
-                *p = vetor[0];
+                *p = vetor[i];
                 delete p;
             }
             delete []vetor;
@@ -132,8 +131,6 @@ int transformaInteiro(string str){
 
 int main()
 {
-    //ofstream arquivo;
-    //arquivo.open("arqInfo.txt");
 
     fstream arq("arqInfo.txt");
     if(arq.is_open()){
@@ -189,13 +186,15 @@ int main()
             cout << num_colisoesLinear << endl;
         if(tipoHash == 2)
             cout << num_colisoesDupla << endl;
+       
+        arq.close();
 
 
     } else {
         cout << "ERRO:  O arquivo nao pode ser aberto!" << endl;
     }
 
-
+    
 
     return 0;
 }
