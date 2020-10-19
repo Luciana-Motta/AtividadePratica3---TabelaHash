@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1603068344 source:c:\users\luciana\desktop\semestre 2020_1\estrtura de dados\atividadepratica3 - tabelahash\main.cpp
+	<iostream>
+	<fstream>
+	"math.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
